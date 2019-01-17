@@ -1,0 +1,8 @@
+alias id='reset && where && who && neofetch'
+alias mir='ssh -l ionreflex mirach.straynoise.com -p 10110 -L 38384:127.0.0.1:8384'
+alias pong='ping -c 3'
+alias rust='sudo dnf update'
+alias shleg='ssh -o KexAlgorithms=+diffie-hellman-group1-sha1'
+alias shroot='ssh -l root'
+alias when='sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"'
+alias where='curl -w "\n" ipinfo.io'
