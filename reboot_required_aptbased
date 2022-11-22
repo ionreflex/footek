@@ -1,0 +1,6 @@
+#!/bin/bash
+LAST_KERNEL=$(dpkg --list | grep linux-image | tail -n 2 | head -1 | sed -e 's/linux-image-//' | awk '{ print $2}')
+CURRENT_KERNEL=$(uname -r)
+echo Waiting : $LAST_KERNEL
+echo Running : $CURRENT_KERNEL
+test $LAST_KERNEL = $CURRENT_KERNEL || echo REBOOT
