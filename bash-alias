@@ -7,6 +7,6 @@ alias where='curl -w "\n" ipinfo.io'
 alias rez=
 alias derez=
 ## centos/alma ##
-alias rez='sudo yum update'
-alias derez='sudo yum clean all && du -sh /var/cache/yum && ~/reboot_required'
+alias rez='sudo yum update' | 'sudo dnf update'
+alias derez='sudo yum clean all && du -sh /var/cache/yum && ~/reboot_required' | 'sudo dnf clean all && du -sh /var/cache/dnf && ~/reboot_required'
 ## arch ##
