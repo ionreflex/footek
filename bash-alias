@@ -4,8 +4,8 @@ alias pong='ping -c 3'
 #?alias when='sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"'
 alias where='curl -w "\n" ipinfo.io'
 ## debian/ubuntu ##
-alias rez=
-alias derez=
+alias rez='sudo apt update && sudo apt dist-upgrade'
+alias derez='sudo apt autoremove -y && sudo apt auto-clean && ~/reboot_required'
 ## centos/alma ##
 alias rez='sudo yum update' | 'sudo dnf update'
 alias derez='sudo yum clean all && du -sh /var/cache/yum && ~/reboot_required' | 'sudo dnf clean all && du -sh /var/cache/dnf && ~/reboot_required'
