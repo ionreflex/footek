@@ -1,8 +1,9 @@
-#alias id='reset && where && who && neofetch'
-#alias oop='f(){ openstack "$@" --fit-width; unset -f f; }; f'
+#???='reset && where && who && neofetch'
+#???'f(){ openstack "$@" --fit-width; unset -f f; }; f'
+#???'sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"'
 alias pong='ping -c 3'
-#?alias when='sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"'
-alias where='curl -w "\n" ipinfo.io'
+alias whenami='date -d "$(curl -s --head http://google.com | grep ^Date: | sed 's/Date: //g')"'
+alias whereami='curl -w "\n" ipinfo.io'
 ## debian/ubuntu ##
 alias rez='sudo apt update && sudo apt dist-upgrade'
 alias derez='sudo apt autoremove -y && sudo apt auto-clean && ~/reboot_required'
