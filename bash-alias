@@ -1,6 +1,12 @@
-alias id='reset && where && who && neofetch'
-alias oop='f(){ openstack "$@" --fit-width; unset -f f; }; f'
+#alias id='reset && where && who && neofetch'
+#alias oop='f(){ openstack "$@" --fit-width; unset -f f; }; f'
 alias pong='ping -c 3'
-alias rust='sudo dnf update'
-alias when='sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"'
+#?alias when='sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"'
 alias where='curl -w "\n" ipinfo.io'
+## debian/ubuntu ##
+alias rez=
+alias derez=
+## centos/alma ##
+alias rez='sudo yum update'
+alias derez='sudo yum clean all && du -sh /var/cache/yum && ~/reboot_required'
+## arch ##
