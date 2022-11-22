@@ -1,0 +1,6 @@
+#!/bin/bash
+LAST_KERNEL=$(rpm -q --last kernel | head -1 | sed -e 's/kernel-//' | awk '{ print $1}')
+CURRENT_KERNEL=$(uname -r)
+echo Waiting : $LAST_KERNEL
+echo Running : $CURRENT_KERNEL
+test $LAST_KERNEL = $CURRENT_KERNEL || echo REBOOT
